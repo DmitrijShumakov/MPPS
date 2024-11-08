@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Icon on the left -->
+    <ImageView
+        android:id="@+id/iconAddress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_home"
+        android:layout_gravity="center_vertical" />
+
+    <!-- Address details container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <!-- Address title -->
+        <TextView
+            android:id="@+id/tvAddressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Address details -->
+        <TextView
+            android:id="@+id/tvAddressDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City, Street, House Number"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- Delete button on the right -->
+    <ImageView
+        android:id="@+id/btnDeleteAddress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete Address" />
+</LinearLayout>

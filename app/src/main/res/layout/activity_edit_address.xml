@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Back" />
+
+    <!-- Title TextView -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/backArrow"
+        android:layout_alignTop="@id/backArrow"
+        android:layout_marginStart="16dp"
+        android:text="Redaguoti adresą"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Address Fields Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backArrow"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_rounded_corners">
+
+        <!-- City Field -->
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <!-- Address Field -->
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Address Name Field -->
+        <EditText
+            android:id="@+id/etAddressName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address Name"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Phone Field -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Apartment Number Field -->
+        <EditText
+            android:id="@+id/etApartmentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apartment Number"
+            android:background="@drawable/bg_edit_text"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Išsaugoti Pakeitimus"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+</RelativeLayout>

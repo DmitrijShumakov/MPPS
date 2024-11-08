@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Product Image -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/cartProductImage"
+            android:layout_width="58dp"
+            android:layout_height="60dp"
+            android:contentDescription="Product Image"
+            android:src="@drawable/ic_product_placeholder" />
+
+        <!-- Quantity Control below the Image -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <ImageView
+                android:id="@+id/decreaseQuantity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_minus"
+                android:contentDescription="Decrease Quantity" />
+
+            <TextView
+                android:id="@+id/cartProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="1"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/increaseQuantity"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Increase Quantity" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Product Name and Price -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/cartProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prekės Pavadinimas"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cartProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kaina"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Remove Product Button -->
+    <ImageView
+        android:id="@+id/removeProduct"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Remove Product" />
+</LinearLayout>
+

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_product_placeholder"
+        android:layout_marginEnd="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kiekis: 1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€0.00"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

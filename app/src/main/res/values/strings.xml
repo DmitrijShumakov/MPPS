@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MPPS</string>
+    <string-array name="price_filter_options">
+        <item>Pigiausios pirmos</item>
+        <item>Brangiausios pirmos</item>
+    </string-array>
+    <string name="address_icon">Address Icon</string>
+</resources>

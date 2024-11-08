@@ -1,0 +1,239 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEF7FF"
+    android:padding="16dp">
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Cart Title -->
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mano krepšelis"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Empty Cart Message -->
+            <TextView
+                android:id="@+id/emptyCartMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jūsų krepšelis tuščias"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textColor="@android:color/darker_gray" />
+
+            <!-- Products Section -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_background"
+                android:padding="16dp" />
+
+            <!-- Delivery Type Title -->
+            <TextView
+                android:id="@+id/deliveryTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pristatymo tipas"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Delivery Options RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/deliveryOptionsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:orientation="horizontal" />
+
+            <!-- Delivery Address Option (Clickable) -->
+            <TextView
+                android:id="@+id/deliveryAddressOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_background"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:padding="16dp"
+                android:text="Pristatymo adresas"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Expandable Address Section -->
+            <LinearLayout
+                android:id="@+id/expandableAddressSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_background"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Current Address Text -->
+                <TextView
+                    android:id="@+id/currentAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jūsų adresai:"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Address RecyclerView to display the list of addresses -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/addressRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_background" />
+
+            </LinearLayout>
+            <!-- Pickup Location Option (Clickable) -->
+            <TextView
+                android:id="@+id/pickupLocationOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_background"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:padding="16dp"
+                android:text="Atsiemimo vieta"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Expandable Pickup Location Section -->
+            <LinearLayout
+                android:id="@+id/expandablePickupLocationSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_background"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Map View Placeholder -->
+                <TextView
+                    android:id="@+id/mapPlaceholderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Žemėlapio vieta: [Parodykite galimus atsiemimo taškus]"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+            <!-- Payment Method Option (Clickable) -->
+            <TextView
+                android:id="@+id/paymentMethodOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_background"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:padding="16dp"
+                android:text="Mokėjimo būdas"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Expandable Payment Method Section -->
+            <LinearLayout
+                android:id="@+id/expandablePaymentMethodSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_background"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Cash Payment Option -->
+                <TextView
+                    android:id="@+id/paymentOptionCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grynais"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- Card Payment Option -->
+                <TextView
+                    android:id="@+id/paymentOptionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kortele"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:background="?selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <!-- Total Amount and Checkout Button Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/totalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kaina: €0.00"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/checkoutButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:padding="8dp"
+                    android:text="Apmokėti"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+</RelativeLayout>

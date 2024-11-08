@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Arrow Image -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Back" />
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/backArrow"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_product_placeholder" />
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produkto pavadinimas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/productImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€0.00"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/productName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Quantity Selector -->
+    <LinearLayout
+        android:id="@+id/quantitySelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/productPrice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/decreaseQuantityButton"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="1"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp" />
+
+        <Button
+            android:id="@+id/increaseQuantityButton"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pridėti į krepšelį"
+        android:textSize="16sp"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/quantitySelector"
+        android:layout_marginTop="16dp" />
+
+    <!-- Product Ingredients -->
+    <TextView
+        android:id="@+id/productIngredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudedamosios dalys"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/addToCartButton"
+        android:layout_marginTop="16dp" />
+
+    <!-- Product Nutrition Value -->
+    <TextView
+        android:id="@+id/productNutrition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maistinė vertė"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/productIngredients"
+        android:layout_marginTop="8dp" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav"/>
+</RelativeLayout>

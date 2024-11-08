@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Arrow Image -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Back" />
+
+    <!-- Title TextView (dynamic category title) -->
+    <TextView
+        android:id="@+id/tvProductList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/backArrow"
+        android:paddingBottom="16dp"
+        android:text="Category Title"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for displaying products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tvProductList"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+</RelativeLayout>

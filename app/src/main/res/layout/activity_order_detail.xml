@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Arrow for navigating to OrderActivity -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backArrow"
+        android:layout_above="@id/cancelOrderButton"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Order Information Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Užsakymo informacija"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Delivery Address / Store Name -->
+            <TextView
+                android:id="@+id/tvDeliveryAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pristatymo adresas: [Address/Store Name]"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Delivery Type -->
+            <TextView
+                android:id="@+id/tvDeliveryType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pristatymo tipas: [Delivery Type]"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Total Amount -->
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visa suma: €[Total Amount]"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Order Date -->
+            <TextView
+                android:id="@+id/tvOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data: [Order Date]"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Order Status -->
+            <TextView
+                android:id="@+id/tvOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statusas: [Order Status]"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Order Items List Label -->
+            <TextView
+                android:id="@+id/tvItemsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prekės"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <!-- RecyclerView for Order Items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderItemsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Cancel Order Button -->
+    <Button
+        android:id="@+id/cancelOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atsaukti Užsakymą"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+</RelativeLayout>

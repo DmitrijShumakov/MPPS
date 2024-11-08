@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rounded_background">
+
+    <!-- Produkto vaizdas -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="Produkto vaizdas"
+        android:src="@drawable/ic_product_placeholder" />
+
+    <!-- Produkto pavadinimas -->
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produkto pavadinimas"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <!-- Produkto kaina -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€0.00"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
+

@@ -1,0 +1,144 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Pavadinimas ir antraštė -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MPPS"
+            android:textColor="#FFAB91"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maisto produktų pristatymo sistema"
+            android:textColor="#FFAB91"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Vardas įvesties laukas -->
+        <EditText
+            android:id="@+id/firstNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vardas"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Pavardė įvesties laukas -->
+        <EditText
+            android:id="@+id/lastNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pavardė"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Telefono numeris įvesties laukas -->
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefono numeris"
+            android:inputType="phone"
+            android:drawableStart="@drawable/ic_phone"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- El. pašto įvesties laukas -->
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="El. pašto adresas"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_email"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Slaptažodžio įvesties laukas -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Slaptažodis"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Slaptažodžio patvirtinimo laukas -->
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Patvirtinkite slaptažodį"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Registracijos mygtukas -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registruotis"
+            android:backgroundTint="#FFAB91"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Arba tekstas -->
+        <TextView
+            android:id="@+id/orText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arba"
+            android:textColor="#FFAB91"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Prisijungimo nuoroda -->
+        <Button
+            android:id="@+id/loginLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prisijungti"
+            android:backgroundTint="#FFAB91"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

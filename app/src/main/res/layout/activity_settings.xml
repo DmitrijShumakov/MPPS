@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FEF7FF">
+
+    <!-- Title TextView for "Paskyra" -->
+
+    <!-- Profile Icon at the top left, aligned below the "Paskyra" title -->
+
+    <TextView
+        android:id="@+id/tvAccountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:paddingBottom="16dp"
+        android:text="Paskyra"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_default_profile"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tvAccountTitle"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/circle_shape"
+        android:layout_marginStart="8dp" />
+
+    <!-- Name and Address Section -->
+
+    <!-- Scrollable content to prevent overlap with the navigation bar -->
+    <LinearLayout
+        android:layout_width="249dp"
+        android:layout_height="86dp"
+        android:layout_below="@id/tvAccountTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_toEndOf="@id/profileIcon"
+        android:orientation="vertical">
+
+        <!-- Vardas Pavardė -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vardas Pavardė"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Adresas -->
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adresas"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="395dp"
+        android:layout_height="423dp"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/profileIcon"
+        android:layout_marginTop="23dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Account Settings Button -->
+            <Button
+                android:id="@+id/btnAccountSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFAB91"
+                android:drawableLeft="@drawable/ic_settings"
+                android:gravity="start|center_vertical"
+                android:padding="16dp"
+                android:text="Paskyros Nustatymai"
+                android:textColor="#000000" />
+
+            <!-- Order History Button -->
+            <Button
+                android:id="@+id/btnOrderHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFAB91"
+                android:gravity="start|center_vertical"
+                android:drawableLeft="@drawable/ic_history"
+                android:padding="16dp"
+                android:text="Užsakymo istorija"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btnMyAddresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFAB91"
+                android:gravity="start|center_vertical"
+                android:drawableLeft="@drawable/ic_address"
+                android:padding="16dp"
+                android:text="Mano Adresai"
+                android:textColor="#000000" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFAB91"
+                android:padding="16dp"
+                android:text="Atsijungti"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+</RelativeLayout>
+

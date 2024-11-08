@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    android:background="@drawable/rounded_background">
+
+    <!-- Parduotuvės logotipas -->
+    <ImageView
+        android:id="@+id/storeLogo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="Parduotuvės logotipas"
+        android:src="@drawable/ic_store_placeholder"/>
+
+    <!-- Parduotuvės pavadinimas -->
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parduotuvė"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
